@@ -247,19 +247,9 @@ public class GameScreen extends GLScreen {
         SnakePart head = snake.parts.get(0);
         Stain stain = world.stain;
 
-//        Pixmap stainPixmap = null;
-//        if (stain.type == Stain.TYPE_1) {
-//            stainPixmap = Assets.statin1;
-//        }
-//        if (stain.type == Stain.TYPE_2) {
-//            stainPixmap = Assets.statin2;   //fix
-//        }
-//        if (stain.type == Stain.TYPE_3) {
-//            stainPixmap = Assets.statin1;   //fix
-//        }
         int x = stain.x * World.TILE_WIDTH + World.TILE_WIDTH / 2;
         int y = stain.y * World.TILE_HEIGHT + World.TILE_HEIGHT / 2;
-//        g.drawPixmap(stainPixmap, x, y);
+
         batcher.setColor(Color.ROYAL);
         batcher.drawSprite(x + X_SHIFT, y + Y_SHIFT, World.TILE_WIDTH, World.TILE_HEIGHT, Assets.tile);
         batcher.setColor(Color.BLACK);
@@ -283,22 +273,9 @@ public class GameScreen extends GLScreen {
 
         }
 
-//        Pixmap headPixmap = null;
-//        if (snake.direction == Snake.UP) {
-//            headPixmap = Assets.headUp;
-//        }
-//        if (snake.direction == Snake.LEFT) {
-//            headPixmap = Assets.headLeft;
-//        }
-//        if (snake.direction == Snake.DOWN) {
-//            headPixmap = Assets.headDown;
-//        }
-//        if (snake.direction == Snake.RIGHT) {
-//            headPixmap = Assets.headRight;
-//        }
         x = head.x * World.TILE_WIDTH + World.TILE_WIDTH / 2;
         y = head.y * World.TILE_HEIGHT + World.TILE_HEIGHT / 2;
-//        g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+
         batcher.setColor(0.4f, 0f, 0f, 1f);
         batcher.drawSprite(x + X_SHIFT, y + Y_SHIFT, World.TILE_WIDTH, World.TILE_HEIGHT, Assets.tile);
     }
